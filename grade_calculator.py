@@ -1,33 +1,39 @@
-# Grade Calculator Program with Grades
+# Grade Calculator Program with Grades and Repeat Option
 
-# Ask for student's name
-name = input("Enter the student's name: ")
+while True:
+    # Ask for student's name
+    name = input("\nEnter the student's name (type 'Exit' to stop): ")
 
-# Ask for 3 subject marks
-mark1 = float(input("Enter marks for Subject 1: "))
-mark2 = float(input("Enter marks for Subject 2: "))
-mark3 = float(input("Enter marks for Subject 3: "))
+    # Check if the user wants to exit
+    if name.lower() == "exit":
+        print("Program ended.")
+        break
 
-# Calculate the average
-average = (mark1 + mark2 + mark3) / 3
+    # Ask for 3 subject marks
+    mark1 = float(input("Enter marks for Subject 1: "))
+    mark2 = float(input("Enter marks for Subject 2: "))
+    mark3 = float(input("Enter marks for Subject 3: "))
 
-# Determine grade
-if average >= 75:
-    grade = "A"
-elif average >= 60:
-    grade = "B"
-elif average >= 40:
-    grade = "C"
-else:
-    grade = "Fail"
+    # Calculate the average
+    average = (mark1 + mark2 + mark3) / 3
 
-# Display results
-print("\nStudent Name:", name)
-print("Average Marks:", round(average, 2))
-print("Grade:", grade)
+    # Determine grade
+    if average >= 75:
+        grade = "A"
+    elif average >= 60:
+        grade = "B"
+    elif average >= 40:
+        grade = "C"
+    else:
+        grade = "Fail"
 
-# Display Pass/Fail
-if average >= 40:
-    print("Result: Pass")
-else:
-    print("Result: Fail")
+    # Display results
+    print("\nStudent Name:", name)
+    print("Average Marks:", round(average, 2))
+    print("Grade:", grade)
+
+    # Display Pass/Fail
+    if average >= 40:
+        print("Result: Pass")
+    else:
+        print("Result: Fail")
