@@ -1,20 +1,20 @@
-# Grade Calculator Program with Grades and Repeat Option
+# Advanced Grade Calculator Program
 
 while True:
     # Ask for student's name
     name = input("\nEnter the student's name (type 'Exit' to stop): ")
 
-    # Check if the user wants to exit
+    # Exit condition
     if name.lower() == "exit":
         print("Program ended.")
         break
 
-    # Ask for 3 subject marks
+    # Input marks
     mark1 = float(input("Enter marks for Subject 1: "))
     mark2 = float(input("Enter marks for Subject 2: "))
     mark3 = float(input("Enter marks for Subject 3: "))
 
-    # Calculate the average
+    # Calculate average
     average = (mark1 + mark2 + mark3) / 3
 
     # Determine grade
@@ -27,13 +27,9 @@ while True:
     else:
         grade = "Fail"
 
-    # Display results
-    print("\nStudent Name:", name)
-    print("Average Marks:", round(average, 2))
-    print("Grade:", grade)
-
-    # Display Pass/Fail
-    if average >= 40:
-        print("Result: Pass")
-    else:
-        print("Result: Fail")
+    # Print clean formatted output
+    print("------------------------------")
+    print("Name    :", name)
+    print("Average :", round(average, 2))
+    print("Grade   :", grade)
+    print("------------------------------")
